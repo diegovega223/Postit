@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <form id="postit-form">
+        <label for="postit-header">Titulo:</label>
+        <input id="postit-header" type="text" required maxlength="20">
+    
+        <label for="postit-content">Contenido:</label>
+        <textarea id="postit-content" required maxlength="100"></textarea> 
+    
+        <label for="postit-color">Color del encabezado:</label>
+        <input id="postit-color" type="color" required>
+    
+        <button type="submit">Crear</button>
+    </form>
+
+    <div id="postit-container">
+
+
+    </div>
+
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+          <h2>Confirmar eliminación</h2>
+          <p>¿Estás seguro de que quieres borrar este post-it?</p>
+          <div class="button-container">
+            <button id="confirmDelete">Sí, borrar</button>
+            <button id="cancelDelete">No, cancelar</button>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
